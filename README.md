@@ -71,8 +71,8 @@ Its goal is to make it easier for people to meet and connect in real life — fr
 ## ⚙️ Installation & Setup
 
 ### 1 Clone the repository
-git clone https://github.com/marco-crispo/laraiav.git
-cd laraiav
+git clone https://github.com/marco-crispo/iav.git
+cd iav
 
 ### 2 Install Laravel dependencies
 composer install
@@ -162,10 +162,10 @@ php artisan migrate --seed
 
 ### 7 Start local development servers in two separate terminal or put them together
 #### 1 Start Laravel Vite
-(cd ./laraiav && composer run dev)
+(cd ./iav && composer run dev)
 
 #### 2 Start Laravel queue worker
-(cd ./laraiav && php artisan queue:work)
+(cd ./iav && php artisan queue:work)
 
 
 #### 3 App available at
