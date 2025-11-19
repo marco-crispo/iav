@@ -1,0 +1,169 @@
+/* IMPORTA TAILWIND */
+@import "tailwindcss";
+
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* THEME */
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+    /* Colori che mappano quelli di Ionic */
+    --color-primary: var(--ion-color-primary);
+    --color-secondary: var(--ion-color-secondary);
+}
+
+/* GLOBALI */
+body {
+    font-family: var(--font-sans);
+}
+
+/* UTILITY PERSONALIZZATE TAILWIND 4 */
+@utility btn-primary {
+    @apply bg-primary text-white rounded-xl py-1 font-medium shadow;
+}
+
+@utility card {
+    @apply bg-white rounded-2xl p-6 shadow;
+}
+
+/* STILI PER IONIC */
+ion-content {
+    @apply bg-gray-100;
+}
+
+/* .modern-input {
+    --padding-start: 14px;
+    --padding-end: 14px;
+    --padding-top: 14px;
+    --padding-bottom: 14px;
+    --background: #ffffff;
+    --border-radius: 14px;
+    --border-width: 1px;
+    --border-color: #d1d5db;
+    --highlight-color-focused: #e87d04;
+    background: #ffffff;
+}
+
+.modern-input .input {
+    font-size: 16px !important;
+}
+
+.modern-textarea {
+    --padding-start: 14px;
+    --padding-end: 14px;
+    --padding-top: 14px;
+    --padding-bottom: 14px;
+    --background: white;
+    --border-radius: 14px;
+    --border-width: 1px;
+    --border-color: #d1d5db;
+    --background: #ffffff !important;
+} */
+
+.input-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  /* box-shadow: 0 0px 2px rgba(0,0,0,0.08); */
+  padding: 4px 4px;
+  margin: 0;
+}
+
+/* Forza lo stile interno generico */
+.input-wrapper ion-textarea,
+.input-wrapper ion-input {
+  --background: transparent !important;
+  --padding-bottom: 0;
+  --padding-top: 0;
+  --padding-start: 8px;
+  --padding-end: 0;
+}
+
+/* Testo interno */
+.input-wrapper textarea,
+.input-wrapper input {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  width: 100%;
+  font-size: 16px;
+  padding-left: 8px;
+}
+
+/* ion-input:focus-within, ion-textarea:focus-within {
+    border-color: #e87d04;
+    box-shadow: 0 0 0 2px rgb(var(--ion-color-primary-rgb) / 0.25);
+} */
+
+ion-datetime-button::part(native) {
+    padding: 14px;
+    border-radius: 14px;
+    border-width: 1px;
+    border-color: #d1d5db;
+    background: #ffffff;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    width: 100%;
+}
+
+ion-select {
+    --padding-start: 10px;
+    --padding-end: 10px;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+}
+
+ion-range {
+    /* padding-top: calc(20px + 0.75rem); */
+    padding-left: calc(20px + 0.35rem);
+    padding-right: calc(20px + 0.35rem);
+    --knob-size: 1rem;
+}
+
+ion-range::part(tick) {
+    background: #d76c13;
+}
+
+ion-range::part(tick-active) {
+    background: #e87d04;
+}
+
+ion-range::part(pin)::before {
+    content: none;
+}
+
+ion-range::part(knob) {
+    background: #d76c13;
+}
+
+ion-range::part(bar) {
+    background: #e87d04;
+}
+
+ion-range::part(bar-active) {
+    background: #e87d04;
+}
+
+ion-badge {
+    --background: #e87d04;
+    --color: white;
+    padding: 8px;
+    font-size: large;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.fixed-avatar {
+  width: 100px;      /* scegli tu la misura */
+  height: 100px;     /* stessa misura → sempre cerchio */
+  border-radius: 50%;
+  overflow: hidden;  /* importantissimo per il crop */
+}
+
+.fixed-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* mantiene la forma circolare */
+  border-radius: 50%;
+}

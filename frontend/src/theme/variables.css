@@ -1,0 +1,13 @@
+/* For information on how to create your own theme, please see:
+http://ionicframework.com/docs/theming/ */
+.leaflet-popup-content {
+    margin: 0px 6px 0px 6px !important;
+    line-height: 1!important;
+}
+
+:root{
+  --ion-color-primary: #007AFF;
+  --ion-color-primary-contrast: #fff;
+  --ion-background-color: #F9FBFF;
+}
+
